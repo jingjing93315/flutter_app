@@ -23,20 +23,20 @@ class Section {
       this.count,
       this.inc});
 
-  static List<Section> resolveDataFromJsonString(String json) {
+  static List<Section> fromMapData(Map data) {
     List<Section> listModel = new List<Section>();
-    List list = jsonDecode(json)['list'];
+    List list = data['list'];
     list.forEach((element) {
       var model = Section(
-          logo: element['logo'],
-          name: element['name'],
-          location: element['location'],
+          logo: element['logo_url'],
+          name: element['market_name'],
+          location: element['download_times_fixed'],
           type: element['type'],
-          size: element['size'],
-          employee: element['employee'],
-          hot: element['hot'],
-          count: element['count'],
-          inc: element['inc']);
+          size: element['tag'],
+          employee: element['market_id'],
+          hot: element['download_times_fixed'],
+          count: element['cid2'],
+          inc: element['baike_name']);
 
       listModel.add(model);
     });
