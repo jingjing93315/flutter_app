@@ -8,4 +8,5 @@ A new Flutter application.
 2. 列表数据展示(静态数据)
 3. 路由跳转
 4. 网络请求
-
+5. Provider介绍及简单使用
+6. 数据持久化
